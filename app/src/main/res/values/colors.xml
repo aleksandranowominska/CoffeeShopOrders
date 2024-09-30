@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="coffee_one">#FFDBB5</color>
+    <color name="coffee_two">#FFEAC5</color>
+    <color name="coffee_three">#6C4E31</color>
+    <color name="coffee_four">#603F26</color>
+    <color name="coffee_five">#561C24</color>
+    <color name="coffee_six">#6D2932</color>
+    <color name="coffee_seven">#C7B7A3</color>
+    <color name="coffee_eight">#E8D8C4</color>
+
+</resources>

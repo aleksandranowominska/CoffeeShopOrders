@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/coffee_seven"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:padding="10sp"
+        android:text="Welcome to Aaditya's Cafe \n☕"
+        android:textAlignment="center"
+        android:textColor="@color/coffee_five"
+        android:layout_marginTop="50dp"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/eTT1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        android:background="@color/coffee_eight"
+        android:ems="10"
+        android:hint="Enter Order 1"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/coffee_six" />
+
+    <EditText
+        android:id="@+id/eTT2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        android:background="@color/coffee_eight"
+        android:ems="10"
+        android:hint="Enter Order 2"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/coffee_six" />
+
+    <EditText
+        android:id="@+id/eTT3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        android:background="@color/coffee_eight"
+        android:ems="10"
+        android:hint="Enter Order 3"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/coffee_six" />
+
+    <EditText
+        android:id="@+id/eTT4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        android:background="@color/coffee_eight"
+        android:ems="10"
+        android:hint="Enter Order 4"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/coffee_six" />
+
+    <Button
+        android:id="@+id/buttonOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/coffee_five"
+        android:text="Order Now!"
+        android:textColor="@color/coffee_one" />
+
+</LinearLayout>
