@@ -1,9 +1,11 @@
 package com.example.kotlin_multi_screen_app_basic.MainActivityScreen
 
+import android.util.Log
 import android.view.autofill.AutofillManager
 import androidx.test.espresso.action.ViewActions.clearText
 import androidx.test.espresso.action.ViewActions.typeText
 import com.example.kotlin_multi_screen_app_basic.R
+import com.example.kotlin_multi_screen_app_basic.Utils.TestingConsts.TESTING_TAG
 import com.example.kotlin_multi_screen_app_basic.Utils.click
 import com.example.kotlin_multi_screen_app_basic.Utils.findViewById
 import com.example.kotlin_multi_screen_app_basic.Utils.testContext
@@ -19,7 +21,9 @@ class MainActivityScreen {
     private val orderButton = findViewById(R.id.buttonOrder)
 
     init {
-        val autofillManager: AutofillManager = testContext.getSystemService(AutofillManager::class.java)
+        Log.d(TESTING_TAG, "Opening Main Activity Screen")
+        val autofillManager: AutofillManager =
+            testContext.getSystemService(AutofillManager::class.java)
         autofillManager.disableAutofillServices()
         waitUntilAllDisplayed(
             titleLabel,
@@ -31,7 +35,8 @@ class MainActivityScreen {
         )
     }
 
-    fun typeProductToOrder(coffeeType: String, orderIndex: Int) {
+    fun typeProductToOrder(productToOrder: String, orderIndex: Int) {
+        Log.d(TESTING_TAG,"Typing \"$productToOrder\" to edit text")
         val selectedEditText = when (orderIndex) {
             1 -> order1EditText
             2 -> order2EditText
@@ -39,14 +44,15 @@ class MainActivityScreen {
             4 -> order4EditText
             else -> throw IllegalArgumentException("Invalid order index")
         }
-        selectedEditText.perform(clearText(), typeText(coffeeType))
+        selectedEditText.perform(clearText(), typeText(productToOrder))
     }
 
     fun confirmOrder() {
+        Log.d(TESTING_TAG, "Confirming the order")
         orderButton.click()
     }
 
-    companion object{
+    companion object {
         const val COFFEE_ESPRESSO = "Espresso"
         const val COFFEE_V60 = "V60"
         const val COFFEE_LATTE = "Latte"
