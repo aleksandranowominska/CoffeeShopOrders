@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Kotlin_multi_screen_app_basic"
         tools:targetApi="31" >
         <activity
-            android:name=".Show_Order"
+            android:name=".ShowOrderActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

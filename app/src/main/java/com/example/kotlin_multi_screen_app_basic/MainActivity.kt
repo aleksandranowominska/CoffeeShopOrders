@@ -6,14 +6,12 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
 
     //creating a key
     //using companion object in Kotlin which works like static keyword in Java
-    companion object{
+    companion object {
         const val KEY = "com.example.kotlin_multi_screen_app_basic.MainActivity.KEY"
     }
 
@@ -28,18 +26,15 @@ class MainActivity : AppCompatActivity() {
         val editT4 = findViewById<EditText>(R.id.eTT4)
         val btnOrder = findViewById<Button>(R.id.buttonOrder)
 
-        btnOrder.setOnClickListener{
+        btnOrder.setOnClickListener {
 
-            val ordersList = "I ordered\n1. "+editT1.text.toString() + "\n2. " + editT2.text.toString() + "\n3. " + editT3.text.toString() + "\n4. " + editT4.text.toString()
-
-            intent =  Intent(this, Show_Order::class.java)
-
-            intent.putExtra(KEY, ordersList)
-
-            startActivity(intent)
+            val ordersList =
+                "I ordered\n1. " + editT1.text.toString() + "\n2. " + editT2.text.toString() + "\n3. " + editT3.text.toString() + "\n4. " + editT4.text.toString()
+            val intentToShowOrder = Intent(this, ShowOrderActivity::class.java)
+            intentToShowOrder.putExtra(KEY, ordersList)
+            startActivity(intentToShowOrder)
 
         }
-
 
 
     }

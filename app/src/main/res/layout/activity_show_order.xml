@@ -8,7 +8,7 @@
     android:background="@color/coffee_seven"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".Show_Order">
+    tools:context=".ShowOrderActivity">
 
     <TextView
         android:id="@+id/textView"

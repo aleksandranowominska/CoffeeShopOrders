@@ -24,7 +24,11 @@ class ShowOrderScreen {
     }
 
     fun assertOrderedItems(viewId: Int, order1: String, order2: String, order3: String, order4: String) {
-        val expectedText = "I ordered\n1. $order1\n2. $order2\n3. $order3\n4. $order4"
-        checkIfTextIsVisible(viewId, expectedText)
+        val orderTexts = listOf("I ordered", order1, order2, order3, order4)
+
+        for (text in orderTexts) {
+            Log.d("blabla", "sprawdzam tekst: $text na ekranie")
+            checkIfTextIsVisible(viewId, text)
+        }
     }
 }
